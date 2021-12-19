@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    {% block content %}
+    <div class="container">
+    <h2>Cadastro</h2>
+    <br>
+    <form method="POST">
+    
+	    <div class="row content">
+	        	{% csrf_token %}
+	        <div class="col-sm-10">
+	        	{{ form.as_p }}
+	        </div>
+
+	    </div>
+	
+        
+        <button type="submit">Confirmar</button>
+    </form>
+    <br><br><br><br><br>
+    </div>
+    {% endblock %}
+
+{% endblock %}

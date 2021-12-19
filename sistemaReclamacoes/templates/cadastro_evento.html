@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de Artigos{% endblock %}
+
+{% block body %}
+
+        <div class="container">
+          <h1>Cadastro de Academia</h1><br><br>
+          {% if codigo == 0 %}
+          <form class="form-horizontal" action="#" method="POST">{% csrf_token %}
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="nome">Nome:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="nome_Academia" placeholder="Insira o nome da Academia" name="nome_Academia">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="ender">Endereço:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="endereco_academia" placeholder="Insira o endereço da Academia. Ex.: Rua Cícero Eduardo, S/N" name="endereco_academia">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-7">
+
+                <input type="email" class="form-control" id="email_academia" placeholder="Insira o email da Academia. Ex.: academia@gmail.com" name="endereco_academia">
+
+            
+
+              </div>
+            </div>
+
+   
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+          {% elif codigo == 1 %}
+            Efetuado com sucesso
+          {% endif %}
+          {{ codigo }}
+
+
+
+{% endblock %}

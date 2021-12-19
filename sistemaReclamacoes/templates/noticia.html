@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}Notica{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <h1>{{noticia.titulo}}</h1>
+  <hr>
+  <h5><span class="glyphicon glyphicon-time"></span> Postado por {{noticia.usuario}}, em {{noticia.data_lancamento_noticia}}.</h5><hr>
+  <br>
+  {{noticia.corpo}}
+  <br><br><br>
+   <img width="400px" height="300px" src="{{MEDIA_URL}}{{noticia.imagem.url}}" style="margin-right: 10px; margin-left: 100px">
+</div>
+{% endblock %}

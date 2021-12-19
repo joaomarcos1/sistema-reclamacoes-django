@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+<!-->>>>>>> af530f7209ef1c257b3041faa02b9bb95f75491b-->
+
+{% block title %}Cadastro em Eventos{% endblock %}
+
+{% block body %}
+
+	<div class="container" >
+	  	<h1>Cadastro em Eventos</h1>
+	  	<br><br>
+
+
+<!--
+
+		        <div class="form-group">
+          			<div class="col-sm-offset-2 col-sm-10">
+            			<button type="submit" class="btn btn-default">Enviar</button>
+            			<button type="reset" class="btn btn-default">Limpar</button>
+          			</div>
+       			</div>
+		  		
+		</form>
+
+
+	-->
+
+	  <form class="form-horizontal" action="#" method="POST">{% csrf_token %}
+   	 <div class="form-group">
+
+		<div class="container" style="background-color: rgba(230,230,230,.35);">
+		   
+		 {% for ev in eventos %}
+			      
+			         
+		<h2>{{ ev.nome_evento }}</h2><hr>
+
+		<h5> Ocorrerá em {{ev.data_inicio}} a {{ev.data_fim}} </h5><hr>
+
+		<h4>{{ev.descricao}}</h4><hr>
+
+		<h5>Ocorrrerá em: {{ev.local}}</h5>
+          
+
+       	
+
+		 {% endfor %}
+
+		 
+		<!--
+		          <div class="col-sm-3" style="width: 300px; margin-left: 0px">
+            <form action="#" method="POST">{% csrf_token %}
+              <div class="form-group">
+              	Escolha o evento ao qual deseja se cadastrar:<br>
+                <select class="form-control" id="sel1">
+			          {% for ev in eventos %}
+			          	
+			            <option value={{ev.nome_evento}}>{{ev.nome_evento}}</option>
+			            
+			          {% endfor %}
+                </select>
+                <br>
+             	 <button type="submit" class="btn btn-default">Confirmar</button>
+          		
+              </div>
+             	 
+            </form>
+          </div>
+	-->
+       
+  	</div>
+  	<br><br>
+  	<button type="submit" onclick="" class="btn btn-default">Confirmar</button>     
+ </div>
+  	  </form>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Artigos{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-1 sidenav">
+
+        </div>
+
+        <div class="col-sm-10">
+          <h1>Artigos do Grupo</h1>
+          <div class="collapse navbar-collapse" id="myNavbar">
+
+          </div>
+          <div class="col-sm-9" style="background-color: : beige;">
+            {% for a in artigos %}
+              <hr>
+              <h3 class="text-info" > {{a.titulo}}</h3>
+              <h6> {{a.titulo}}</h6>
+              <h5>{{a.coautor}}</h5>
+              <!--<h3 class="text-info" ><a href="informacoes_eventos" style="text-decoration: none; color: blue"> {{a.nome_evento}} </h3>-->
+              
+              <h6>Orientado por: {{a.orientador}}</h6>
+              <!--{% if user.username != '' %}
+              <br><br><a href="cadastro_em_evento/{{ a.id }}">Inscreva-se No Evento!</a>
+              {% elif user.username == "admin" %}
+              <br>
+              {% endif %}-->
+             
+              <hr>
+            {% endfor %}
+          </div>
+          <!--<div class="col-sm-3">
+              <a href="cadastro_eventos"> <ins>Cadastre seu evento clicando aqui!</ins></a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+    <!--
+    {% for n in ns %}
+      <img width="333px" src="{{MEDIA_URL}}{{n.imagem.url}}">
+    {% endfor%}
+  -->
+
+{% endblock %}

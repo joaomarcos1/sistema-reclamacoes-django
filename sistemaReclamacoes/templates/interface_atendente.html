@@ -1,0 +1,375 @@
+{% extends 'base.html' %}
+
+{% block title %}{{user.username}}{% endblock %}
+
+{% block body %}
+<!--
+  <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-1 sidenav">
+        </div>
+    	<div class="col-sm-10">
+          <h1>Meu Perfil</h1>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            Username:{{user.username}}
+          	Name: {{user.name}}
+            Idade:{{user.idade}}
+          </div>
+    	</div>
+      </div>
+  </div>
+-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed)
+    .row.content {height: 1500px}*/
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    /* Set black background color, white text and some padding */
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+   
+  <div class="row content">
+    <div class="col-sm-2 sidenav" style="margin-top: 20px;">
+      <h4>Bem Vindo(a), {{user.username}}</h4>
+      <ul class="nav nav-pills nav-stacked">
+       <!-- <li class="active"><a href="#section1">Alterar Informações</a></li>-->
+       <!-- <li ><a href="/editar_perfil_alunos/{{user.id}}">Alterar Informações Pessoais</a></li>-->
+        <!--<li><a href="cadastro_artigo/{{user.id}}">Cadastrar Reclamação </a></li>-->
+        <!--<li><a href="/cadastro_artigo">Cadastrar Artigo</a></li>
+         <li><a href="/entrada_saida_laboratorio">Entrada/Saída Laboratório</a></li>-->
+         <li><a href="/cadastro_tecnico_campo">Cadastrar Técnico</a></li>
+         <li><a href="/cadastro_atendimento">Cadastrar Atendimento</a></li>
+         <li><a href="/cadastro_atendente">Cadastrar Atendente</a></li>
+         <li><a href="/cadastro_usuario">Cadastrar Usuário</a></li>
+        <li><a href="/logout">Desconectar</a></li>
+      </ul><br>
+      <!--
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>-->
+    </div>
+
+    <div class="col-sm-5" style="margin-left: 60px;">
+      <h2><small>Gerenciamento de Atendimentos</small></h2>
+      <hr>
+      <!--<h2>{{user.username}}</h2>-->
+      <br>
+      <p>Seja bem vindo(a) ao gerenciamento de Reclamações.</p>
+         
+      <br><br><br>
+          
+      
+      <div class="container">
+        <div class="jumbotron col-sm-9">
+          <h2>Reclamações Cadastradas</h2>
+          <p>Aqui você pode acompanhar as reclamações cadastradas no sistema.</p>            
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Acionamento</th>
+                <th>Problema Enfrentado</th>
+                <th>Comentário sobre o problema</th>
+                <!--<th>Alterar</th>-->
+              </tr>
+            </thead>
+            <tbody>
+             
+              {% for a in reclama %}
+              <tr>
+            
+                
+                <td> {{  a.clienteReclamante }}  </td>
+                <td> {{  a.problemaEnfrentado  }} </td>
+                <td>  {{ a.comentarioProblema }} </td>
+                
+
+
+              </tr>  
+                {% endfor %}
+
+              
+
+
+          
+          
+            </tbody>
+          </table>
+        </div>
+      </div> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="container">
+            <div class="jumbotron col-sm-9">
+              <h2>Atendimentos</h2>
+              <p>Aqui você pode acompanhar os atendimentos em curso.</p>            
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Acionamento</th>
+                    <th>Status do atendimento</th>
+                    <th>Técnico Resposável</th>
+                    <th>Alterar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                   
+                    {% for b in atend %}
+                    
+                    <tr>
+                   
+                      <td> {{ b.cliente }} </td>
+                      <td> {{ b.situacao }} </td>
+                      <td> {{ b.tecnico_resposavel}} </td>
+                      <td> <a href="/edicao_atendimento/{{b.id}}">Alterar</a></td>
+                 
+                    </tr>
+                    {% endfor %}
+
+                 
+
+            
+              
+
+            
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="container">
+            <div class="jumbotron col-sm-9">
+              <h2>Técnicos de Campo</h2>
+              <p>Aqui você pode identificar e/ou alterar informações dos técnicos de campo.</p>            
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Alterar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                   
+                    {% for b in tecnico_campo %}
+                    
+                    <tr>
+                   
+                      <td> {{ b.nome }} </td>
+                      <td> {{ b.telefone }} </td>
+                      <td> <a href="/edicao_tecnico_campo/{{b.id}}">Alterar</a></td>
+                 
+                    </tr>
+                    {% endfor %}
+
+                 
+
+            
+              
+
+            
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    
+    
+    </div>
+  </div>
+
+
+    </div>
+
+    
+    <div class="col-sm-5" style="margin-left: 60px;">
+     
+      <hr>
+  
+          <div class="container">
+            <div class="jumbotron col-sm-9">
+              <h2>Eventos</h2>
+              <p>Aqui você pode gerenciar os eventos em que está cadastrado.</p>            
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Data de Início</th>
+                    <th>Data de Finalização</th>
+                    <th>Local</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {% for a in eventos %}
+                    {% if a.autor == user.first_name %}
+                    <td> {{ a.nome_evento }} </td>
+                   {% endif %}
+                    {% endfor %}
+
+                  </tr>
+                  <tr>
+               
+            {% for a in eventos %}
+                    {% if a.autor == user.first_name %}
+                    <td> {{ a.data_inicio }} </td>
+                   {% endif %}
+                    {% endfor %}
+
+                  </tr>
+              
+
+              <tr>
+               
+            {% for a in eventos %}
+                    {% if a.autor == user.first_name %}
+                    <td> {{ a.data_fim }} </td>
+                   {% endif %}
+                    {% endfor %}
+
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+-->
+<!--
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      <p><span class="badge">2</span> Comments:</p><br>
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>Me too! WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+        -->
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Frequencia de Alunos no Laboratório {% endblock %}
+
+{% block body %}
+
+
+          <div class="container">
+           <!-- <div class="jumbotron col-sm-9">-->
+              <h2>Entradas Laboratório</h2>
+              <p>Aqui você pode visualizar a Frequencia de Alunos no Laboratório</p>            
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nome Aluno</th>
+                    <th>Data/Hora de Entrada</th>
+                    <th>Data/Hora de Saída</th>
+                   
+
+                  </tr>
+                </thead>
+                <tbody>
+                   {% for a in entradas %}
+                  <tr>
+                   
+               
+                    <td> {{ a.aluno }} </td>
+                    <td> {{ a.hora_entrada }} </td>
+                    <td> {{ a.hora_saida }} </td>
+             
+
+                  </tr>
+               {% endfor %}
+
+           
+
+                </tbody>
+              </table>
+            <!--</div>-->
+          </div>
+
+
+{% endblock %}

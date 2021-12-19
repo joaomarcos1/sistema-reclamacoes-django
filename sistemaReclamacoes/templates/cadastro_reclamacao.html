@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de REclamações{% endblock %}
+
+{% block body %}
+
+
+
+        <div class="container">
+          <h1>Cadastro de Reclamação</h1><br><br>
+          {% if codigo == 0 %}
+          <form class="form-horizontal" action="#" method="POST">{% csrf_token %}
+         
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">Problema Enfrentado:</label>
+              <div class="col-sm-7">
+                <select class="form-control" id="problema_enfrentado" name="problema_enfrentado" required>
+                  <option value="Mal funcionamento Roteador">Mal funcionamento do MODEM</option>
+                  <option value="Mal funcionamento do Roteador/Repetidor">Mal funcionamento do Roteador/Repetidor</option>
+                  <option value="Rompimento de Fibra">Rompimento de Fibra</option>
+                  <option value="Cabo de rede danificado">Cabo de rede danificado</option>
+                  <option value="Sem internet">Sem internet</option>
+                  <option value="Outro Problema">Outro Problema</option>
+                  
+                 
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="ender">Fale sobre o problema:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="comentarioReclamacao" placeholder="Escreva com detalhes sobre o problema que está enfrentando" name="comentarioReclamacao">
+              </div>
+            </div>
+
+
+
+
+<!--
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Co-Autor:</label>
+              <div class="col-sm-7">
+
+                <input type="email" class="form-control" id="coautor_Artigo" placeholder="Insira o(s) co-autor(es) do artigo" name="coautor_Artigo">
+              </div>
+            </div>
+--> 
+
+
+<!--
+     <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Fale sobre o problema:</label>
+            <div class="col-sm-7">
+              <select multiple class="form-control" id="coautor_Artigo" name="coautor_Artigo" required>
+                {% for a in alunos %}
+            
+                <option value="{{a.nome}}">{{a.nome}}</option>
+                
+               {% endfor %}
+              </select>
+          </div>
+        </div>
+
+-->
+
+
+
+<!--
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="fone">Orientador:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="orientador_Artigo" placeholder="Insira o(s) orientador(es) do artigo" name="orientador_Artigo">
+              </div>
+            </div>
+-->
+
+
+
+
+            <!-- LISTAGEM DE ORIENTADORES - PEGANDO VALORES DA TABELA PROFESSORES 
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Orientador:</label>
+            <div class="col-sm-7">
+              <select multiple class="form-control" id="orientador_Artigo" name="orientador_Artigo" required>
+                {% for p in professores %}
+            
+                <option value="{{p.nome}}">{{p.nome}}</option>
+                
+               {% endfor %}
+              </select>
+          </div>
+        </div>
+      -->
+
+
+
+
+
+          <!--
+      <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Status do Artigo:</label>
+            <div class="col-sm-7">
+              <select class="form-control" id="status_Artigo" name="status_Artigo" required>
+                <option value="INICIADO">INICIADO</option>
+                <option value="EM CONSTRUÇÃO">EM CONSTRUÇÃO</option>
+                <option value="CONCLUÍDO">CONCLUÍDO</option>
+               
+              </select>
+          </div>
+        </div>
+
+        -->
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Enviar</button>
+                <button type ="reset" class="btn btn-default" value="Limpar">Limpar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+          {% elif codigo == 1 %}
+            Efetuado com sucesso
+          {% endif %}
+          {{ codigo }}
+
+
+
+{% endblock %}
