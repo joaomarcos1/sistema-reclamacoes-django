@@ -1,0 +1,25 @@
+branch-defaults:
+  main:
+    environment: django-env
+    group_suffix: null
+environment-defaults:
+  djang-env:
+    branch: main
+    repository: origin
+  django-env:
+    branch: null
+    repository: null
+global:
+  application_name: sistema-reclamacoes
+  branch: null
+  default_ec2_keyname: keypair1
+  default_platform: Python 3.7 running on 64bit Amazon Linux 2
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: git
+  workspace_type: Application

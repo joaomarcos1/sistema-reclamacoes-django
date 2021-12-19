@@ -1,0 +1,65 @@
+Dec 19 15:03:24 ip-172-31-6-77 crond[2948]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 59% if used.)
+Dec 19 15:03:24 ip-172-31-6-77 crond[2948]: (CRON) INFO (running with inotify support)
+Dec 19 15:10:01 ip-172-31-6-77 CROND[3375]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 15:10:01 ip-172-31-6-77 CROND[3376]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 15:20:01 ip-172-31-6-77 CROND[3469]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 15:30:02 ip-172-31-6-77 CROND[3548]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 15:30:02 ip-172-31-6-77 CROND[3549]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 15:40:01 ip-172-31-6-77 CROND[3671]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 15:50:01 ip-172-31-6-77 CROND[3751]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 15:50:01 ip-172-31-6-77 CROND[3753]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 16:00:01 ip-172-31-6-77 CROND[3857]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 16:01:01 ip-172-31-6-77 CROND[3916]: (root) CMD (run-parts /etc/cron.hourly)
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3916]: starting 0anacron
+Dec 19 16:01:01 ip-172-31-6-77 anacron[3926]: Anacron started on 2021-12-19
+Dec 19 16:01:01 ip-172-31-6-77 anacron[3926]: Will run job `cron.daily' in 22 min.
+Dec 19 16:01:01 ip-172-31-6-77 anacron[3926]: Will run job `cron.weekly' in 42 min.
+Dec 19 16:01:01 ip-172-31-6-77 anacron[3926]: Will run job `cron.monthly' in 62 min.
+Dec 19 16:01:01 ip-172-31-6-77 anacron[3926]: Jobs will be executed sequentially
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3928]: finished 0anacron
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3916]: starting cron.logrotate.elasticbeanstalk.eb-engine.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3935]: finished cron.logrotate.elasticbeanstalk.eb-engine.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3916]: starting cron.logrotate.elasticbeanstalk.eb-hooks.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3942]: finished cron.logrotate.elasticbeanstalk.eb-hooks.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3916]: starting cron.logrotate.elasticbeanstalk.web-stderr.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3949]: finished cron.logrotate.elasticbeanstalk.web-stderr.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3916]: starting cron.logrotate.elasticbeanstalk.web-stdout.conf
+Dec 19 16:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[3956]: finished cron.logrotate.elasticbeanstalk.web-stdout.conf
+Dec 19 16:10:01 ip-172-31-6-77 CROND[4047]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 16:10:01 ip-172-31-6-77 CROND[4052]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 16:20:01 ip-172-31-6-77 CROND[4130]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 16:23:01 ip-172-31-6-77 anacron[3926]: Job `cron.daily' started
+Dec 19 16:23:01 ip-172-31-6-77 run-parts(/etc/cron.daily)[4156]: starting logrotate
+Dec 19 16:23:01 ip-172-31-6-77 run-parts(/etc/cron.daily)[4164]: finished logrotate
+Dec 19 16:23:01 ip-172-31-6-77 run-parts(/etc/cron.daily)[4156]: starting man-db.cron
+Dec 19 16:23:19 ip-172-31-6-77 run-parts(/etc/cron.daily)[30337]: finished man-db.cron
+Dec 19 16:23:19 ip-172-31-6-77 run-parts(/etc/cron.daily)[4156]: starting mlocate
+Dec 19 16:23:21 ip-172-31-6-77 run-parts(/etc/cron.daily)[30350]: finished mlocate
+Dec 19 16:23:21 ip-172-31-6-77 anacron[3926]: Job `cron.daily' terminated
+Dec 19 16:30:01 ip-172-31-6-77 CROND[30440]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 16:30:02 ip-172-31-6-77 CROND[30445]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 16:40:01 ip-172-31-6-77 CROND[30522]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 16:43:01 ip-172-31-6-77 anacron[3926]: Job `cron.weekly' started
+Dec 19 16:43:01 ip-172-31-6-77 anacron[3926]: Job `cron.weekly' terminated
+Dec 19 16:50:01 ip-172-31-6-77 CROND[30603]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 16:50:01 ip-172-31-6-77 CROND[30604]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 17:00:01 ip-172-31-6-77 CROND[30722]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 17:01:01 ip-172-31-6-77 CROND[30734]: (root) CMD (run-parts /etc/cron.hourly)
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30734]: starting 0anacron
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30743]: finished 0anacron
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30734]: starting cron.logrotate.elasticbeanstalk.eb-engine.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30750]: finished cron.logrotate.elasticbeanstalk.eb-engine.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30734]: starting cron.logrotate.elasticbeanstalk.eb-hooks.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30757]: finished cron.logrotate.elasticbeanstalk.eb-hooks.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30734]: starting cron.logrotate.elasticbeanstalk.web-stderr.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30764]: finished cron.logrotate.elasticbeanstalk.web-stderr.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30734]: starting cron.logrotate.elasticbeanstalk.web-stdout.conf
+Dec 19 17:01:01 ip-172-31-6-77 run-parts(/etc/cron.hourly)[30771]: finished cron.logrotate.elasticbeanstalk.web-stdout.conf
+Dec 19 17:03:01 ip-172-31-6-77 anacron[3926]: Job `cron.monthly' started
+Dec 19 17:03:01 ip-172-31-6-77 anacron[3926]: Job `cron.monthly' terminated
+Dec 19 17:03:01 ip-172-31-6-77 anacron[3926]: Normal exit (3 jobs run)
+Dec 19 17:10:01 ip-172-31-6-77 CROND[30848]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 17:10:01 ip-172-31-6-77 CROND[30849]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 17:20:01 ip-172-31-6-77 CROND[31050]: (root) CMD (/usr/lib64/sa/sa1 1 1)
+Dec 19 17:30:01 ip-172-31-6-77 CROND[31310]: (root) CMD (/opt/elasticbeanstalk/bin/publishlogs -type publish)
+Dec 19 17:30:01 ip-172-31-6-77 CROND[31315]: (root) CMD (/usr/lib64/sa/sa1 1 1)

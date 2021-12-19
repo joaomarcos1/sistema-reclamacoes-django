@@ -1,0 +1,638 @@
+2021/12/19 15:03:29.780234 [INFO] Starting...
+2021/12/19 15:03:29.780284 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 15:03:29.780351 [INFO] reading event message file
+2021/12/19 15:03:29.780444 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 15:03:29.780506 [INFO] Engine received EB command userdata-exec
+
+2021/12/19 15:03:29.835676 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 15:03:30.629813 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 15:03:31.439390 [INFO] This is a workflow controlled instance.
+2021/12/19 15:03:31.439464 [INFO] Engine command: (env-launch)
+
+2021/12/19 15:03:31.446450 [INFO] Executing instruction: SyncClock
+2021/12/19 15:03:31.446458 [INFO] Starting SyncClock
+2021/12/19 15:03:31.446473 [INFO] Running command /bin/sh -c /usr/bin/chronyc tracking
+2021/12/19 15:03:31.456008 [INFO] Reference ID    : A9FEA97B (169.254.169.123)
+Stratum         : 4
+Ref time (UTC)  : Sun Dec 19 15:03:28 2021
+System time     : 0.000000083 seconds slow of NTP time
+Last offset     : +0.000073862 seconds
+RMS offset      : 0.000073862 seconds
+Frequency       : 24.690 ppm slow
+Residual freq   : +37.411 ppm
+Skew            : 8.395 ppm
+Root delay      : 0.000474777 seconds
+Root dispersion : 0.002189155 seconds
+Update interval : 2.0 seconds
+Leap status     : Normal
+
+2021/12/19 15:03:31.456028 [INFO] Running command /bin/sh -c /usr/bin/chronyc -a makestep
+2021/12/19 15:03:31.465599 [INFO] 200 OK
+
+2021/12/19 15:03:31.471938 [INFO] Skipping Configure OS
+2021/12/19 15:03:31.471957 [INFO] Skipping LockGUID
+2021/12/19 15:03:31.471964 [INFO] Skipping GenerateEBBanner
+2021/12/19 15:03:31.471971 [INFO] Skipping Install Process Manager
+2021/12/19 15:03:31.471978 [INFO] Skipping install proxy
+2021/12/19 15:03:31.471984 [INFO] Skipping installhealthd
+2021/12/19 15:03:31.471990 [INFO] Skipping Install Log Streaming Manager
+2021/12/19 15:03:31.471995 [INFO] Skipping install X-Ray
+2021/12/19 15:03:31.472002 [INFO] Skipping install Third Party License
+2021/12/19 15:03:31.472007 [INFO] Skipping install httpd
+2021/12/19 15:03:31.472015 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:31.472019 [INFO] Executing instruction: installSqsd
+2021/12/19 15:03:31.472024 [INFO] This is a web server environment instance, skip install sqsd daemon ...
+2021/12/19 15:03:31.472030 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:31.472034 [INFO] Executing instruction: bootstraphealthd
+2021/12/19 15:03:31.472038 [INFO] this is an enhanced health env ...
+2021/12/19 15:03:31.472051 [INFO] Running command /bin/sh -c id -u apache
+2021/12/19 15:03:31.474193 [INFO] 48
+
+2021/12/19 15:03:31.474209 [INFO] bootstrap healthd....
+2021/12/19 15:03:31.474221 [INFO] Running command /bin/sh -c /usr/bin/id -u healthd || /usr/sbin/useradd --user-group healthd -s /sbin/nologin --create-home
+2021/12/19 15:03:31.761043 [INFO] bootstrap healthd....
+2021/12/19 15:03:31.761067 [INFO] Running command /bin/sh -c /usr/bin/id -u healthd || /usr/sbin/useradd --user-group healthd -s /sbin/nologin --create-home
+2021/12/19 15:03:31.770619 [INFO] 1001
+
+2021/12/19 15:03:31.770876 [INFO] Executing instruction: GetSetupProxyLog
+2021/12/19 15:03:31.770940 [INFO] Skipping Install yum packages
+2021/12/19 15:03:31.770948 [INFO] Skipping Install Python Modules
+2021/12/19 15:03:31.770954 [INFO] Skipping MarkBaked
+2021/12/19 15:03:31.770960 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:31.770964 [INFO] Executing instruction: TuneSystemSettings
+2021/12/19 15:03:31.770967 [INFO] Starting TuneSystemSettings
+2021/12/19 15:03:31.770972 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:31.793389 [INFO] Executing instruction: GetSetupLogRotate
+2021/12/19 15:03:31.793400 [INFO] Initialize LogRotate files and directories
+2021/12/19 15:03:31.909295 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:31.909312 [INFO] Executing instruction: BootstrapCFNHup
+2021/12/19 15:03:31.909316 [INFO] Bootstrap cfn-hup
+2021/12/19 15:03:31.924605 [INFO] Copying file /opt/elasticbeanstalk/config/private/aws-eb-command-handler.conf to /etc/cfn/hooks.d/aws-eb-command-handler.conf
+2021/12/19 15:03:31.939574 [INFO] Executing instruction: StartCFNHup
+2021/12/19 15:03:31.939587 [INFO] Start cfn-hup
+2021/12/19 15:03:31.939606 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2021/12/19 15:03:31.943688 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2021/12/19 15:03:31.955137 [INFO] Running command /bin/sh -c systemctl show -p PartOf cfn-hup.service
+2021/12/19 15:03:32.007709 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2021/12/19 15:03:32.172881 [INFO] Running command /bin/sh -c systemctl reset-failed
+2021/12/19 15:03:32.177574 [INFO] Running command /bin/sh -c systemctl is-enabled aws-eb.target
+2021/12/19 15:03:32.187896 [INFO] Running command /bin/sh -c systemctl enable aws-eb.target
+2021/12/19 15:03:32.332183 [INFO] Running command /bin/sh -c systemctl start aws-eb.target
+2021/12/19 15:03:32.343852 [INFO] Running command /bin/sh -c systemctl enable cfn-hup.service
+2021/12/19 15:03:32.511888 [INFO] Running command /bin/sh -c systemctl show -p PartOf cfn-hup.service
+2021/12/19 15:03:32.517353 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2021/12/19 15:03:32.529167 [INFO] Running command /bin/sh -c systemctl start cfn-hup.service
+2021/12/19 15:03:32.599794 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:32.599809 [INFO] Executing instruction: SetupPublishLogCronjob
+2021/12/19 15:03:32.599813 [INFO] Setup publish logs cron job...
+2021/12/19 15:03:32.599818 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
+2021/12/19 15:03:32.601398 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:32.601406 [INFO] Executing instruction: MarkBootstrapped
+2021/12/19 15:03:32.601410 [INFO] Starting MarkBootstrapped
+2021/12/19 15:03:32.601415 [INFO] Instance has NOT been bootstrapped
+2021/12/19 15:03:32.601462 [INFO] Marked instance as Bootstrapped
+2021/12/19 15:03:32.601466 [INFO] Executing instruction: Save CFN Stack Info
+2021/12/19 15:03:32.601501 [INFO] Starting SwitchCFNStack
+2021/12/19 15:03:32.601506 [INFO] Executing cleanup logic
+2021/12/19 15:03:32.601514 [INFO] Platform Engine finished execution on command: env-launch
+
+2021/12/19 15:04:03.704822 [INFO] Starting...
+2021/12/19 15:04:03.704867 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 15:04:03.704882 [INFO] reading event message file
+2021/12/19 15:04:03.704979 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 15:04:03.705041 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 15:04:03.798867 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 15:04:04.130556 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 15:04:04.452076 [INFO] checking whether command app-deploy is applicable to this instance...
+2021/12/19 15:04:04.452090 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 15:04:04.452094 [INFO] Engine command: (app-deploy)
+
+2021/12/19 15:04:04.452100 [INFO] Downloading EB Application...
+2021/12/19 15:04:04.452104 [INFO] Region: us-west-2
+2021/12/19 15:04:04.452107 [INFO] envID: e-m3rhdv3whj
+2021/12/19 15:04:04.452111 [INFO] envBucket: elasticbeanstalk-us-west-2-222477928330
+2021/12/19 15:04:04.452115 [INFO] Using manifest file name from command request
+2021/12/19 15:04:04.452127 [INFO] Unable to get version manifest file.
+2021/12/19 15:04:04.452131 [INFO] Downloading latest manifest available.
+2021/12/19 15:04:04.452135 [INFO] Download latest app version manifest
+2021/12/19 15:04:04.452213 [INFO] resources/environments/e-m3rhdv3whj/_runtime/versions/manifest
+2021/12/19 15:04:04.505461 [INFO] latestManifest key *: resources/environments/e-m3rhdv3whj/_runtime/versions/manifest_1639926115209
+
+2021/12/19 15:04:04.505651 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/versions/manifest_1639926115209
+2021/12/19 15:04:04.525828 [INFO] Download successful150bytes downloaded
+2021/12/19 15:04:04.525929 [INFO] Trying to read and parse version manifest...
+2021/12/19 15:04:04.526002 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/_versions/sistema-reclamacoes/app-e584-211219_120109
+2021/12/19 15:04:05.767560 [INFO] Download successful32747069bytes downloaded
+2021/12/19 15:04:05.767951 [INFO] Executing instruction: ElectLeader
+2021/12/19 15:04:05.767961 [INFO] Running leader election for instance i-097a7246364dca3da...
+2021/12/19 15:04:05.767966 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2021/12/19 15:04:05.767982 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id ca16a470-fd47-40de-ac0f-7079902b2386 --listener-id i-097a7246364dca3da --region us-west-2
+2021/12/19 15:04:06.078428 [INFO] Instance is Leader.
+2021/12/19 15:04:06.078484 [INFO] Executing instruction: stopSqsd
+2021/12/19 15:04:06.078491 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2021/12/19 15:04:06.078496 [INFO] Executing instruction: PreBuildEbExtension
+2021/12/19 15:04:06.078500 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2021/12/19 15:04:06.078514 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2 --configsets Infra-EmbeddedPreBuild
+2021/12/19 15:04:06.414252 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2021/12/19 15:04:06.414288 [INFO] Executing instruction: StageApplication
+2021/12/19 15:04:06.426402 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2021/12/19 15:04:06.426427 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2021/12/19 15:04:07.634921 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2021/12/19 15:04:07.749497 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2021/12/19 15:04:07.752923 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2021/12/19 15:04:07.752939 [INFO] Executing instruction: InstallDependency
+2021/12/19 15:04:07.752948 [INFO] checking dependencies file
+2021/12/19 15:04:07.752956 [INFO] Installing dependencies with requirements.txt by using Pip
+2021/12/19 15:04:07.752972 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2021/12/19 15:04:13.608757 [INFO] Collecting Pillow==6.0.0
+  Downloading Pillow-6.0.0-cp37-cp37m-manylinux1_x86_64.whl (2.0 MB)
+Collecting protobuf==3.7.1
+  Downloading protobuf-3.7.1-cp37-cp37m-manylinux1_x86_64.whl (1.2 MB)
+Collecting psycopg2==2.8.2
+  Downloading psycopg2-2.8.2.tar.gz (368 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+
+2021/12/19 15:04:13.608812 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:  ERROR: Command errored out with exit status 1:
+   command: /var/app/venv/staging-LQM1lest/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-pn9t24rr/psycopg2_36eaf0c40ca242e5a9f8d1640c42593d/setup.py'"'"'; __file__='"'"'/tmp/pip-install-pn9t24rr/psycopg2_36eaf0c40ca242e5a9f8d1640c42593d/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-dmv3bkom
+       cwd: /tmp/pip-install-pn9t24rr/psycopg2_36eaf0c40ca242e5a9f8d1640c42593d/
+  Complete output (23 lines):
+  running egg_info
+  creating /tmp/pip-pip-egg-info-dmv3bkom/psycopg2.egg-info
+  writing /tmp/pip-pip-egg-info-dmv3bkom/psycopg2.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-dmv3bkom/psycopg2.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-dmv3bkom/psycopg2.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-dmv3bkom/psycopg2.egg-info/SOURCES.txt'
+  
+  Error: pg_config executable not found.
+  
+  pg_config is required to build psycopg2 from source.  Please add the directory
+  containing pg_config to the $PATH or specify the full executable path with the
+  option:
+  
+      python setup.py build_ext --pg-config /path/to/pg_config build ...
+  
+  or with the pg_config option in 'setup.cfg'.
+  
+  If you prefer to avoid building psycopg2 from source, please install the PyPI
+  'psycopg2-binary' package instead.
+  
+  For further information please check the 'doc/src/install.rst' file (also at
+  <http://initd.org/psycopg/docs/install.html>).
+  
+  ----------------------------------------
+WARNING: Discarding https://files.pythonhosted.org/packages/23/7e/93c325482c328619870b6cd09370f6dbe1148283daca65115cd63642e60f/psycopg2-2.8.2.tar.gz#sha256=5cacf21b6f813c239f100ef78a4132056f93a5940219ec25d2ef833cbeb05588 (from https://pypi.org/simple/psycopg2/) (requires-python:>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+ERROR: Could not find a version that satisfies the requirement psycopg2==2.8.2 (from versions: 2.0.10, 2.0.11, 2.0.12, 2.0.13, 2.0.14, 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.3.2, 2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.5, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.5.5, 2.6, 2.6.1, 2.6.2, 2.7, 2.7.1, 2.7.2, 2.7.3, 2.7.3.1, 2.7.3.2, 2.7.4, 2.7.5, 2.7.6, 2.7.6.1, 2.7.7, 2.8, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.9, 2.9.1, 2.9.2)
+ERROR: No matching distribution found for psycopg2==2.8.2
+ 
+
+2021/12/19 15:04:13.608831 [INFO] Executing cleanup logic
+2021/12/19 15:04:13.608928 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1639926253,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1639926253,"severity":"ERROR"}]}]}
+
+2021/12/19 15:04:13.609085 [INFO] Platform Engine finished execution on command: app-deploy
+
+2021/12/19 17:16:42.624286 [INFO] Starting...
+2021/12/19 17:16:42.624329 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:16:42.624345 [INFO] reading event message file
+2021/12/19 17:16:42.624441 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:16:42.624498 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:16:42.712550 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:16:43.013596 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:16:43.347023 [INFO] checking whether command app-deploy is applicable to this instance...
+2021/12/19 17:16:43.347037 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:16:43.347045 [INFO] Engine command: (app-deploy)
+
+2021/12/19 17:16:43.347052 [INFO] Downloading EB Application...
+2021/12/19 17:16:43.347061 [INFO] Region: us-west-2
+2021/12/19 17:16:43.347065 [INFO] envID: e-m3rhdv3whj
+2021/12/19 17:16:43.347069 [INFO] envBucket: elasticbeanstalk-us-west-2-222477928330
+2021/12/19 17:16:43.347074 [INFO] Using manifest file name from command request
+2021/12/19 17:16:43.347081 [INFO] Manifest name is : manifest_1639934200366
+2021/12/19 17:16:43.347085 [INFO] Download app version manifest
+2021/12/19 17:16:43.347223 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/versions/manifest_1639934200366
+2021/12/19 17:16:43.389477 [INFO] Download successful110bytes downloaded
+2021/12/19 17:16:43.389654 [INFO] Trying to read and parse version manifest...
+2021/12/19 17:16:43.393580 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/_versions/sistema-reclamacoes/app-e584-211219_141601
+2021/12/19 17:16:43.702796 [INFO] Download successful32747069bytes downloaded
+2021/12/19 17:16:43.703045 [INFO] Executing instruction: ElectLeader
+2021/12/19 17:16:43.703055 [INFO] Running leader election for instance i-097a7246364dca3da...
+2021/12/19 17:16:43.703059 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2021/12/19 17:16:43.703074 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id ebb9d44f-aafa-4559-8128-99cf1e1850ae --listener-id i-097a7246364dca3da --region us-west-2
+2021/12/19 17:16:44.003279 [INFO] Instance is Leader.
+2021/12/19 17:16:44.003332 [INFO] Executing instruction: stopSqsd
+2021/12/19 17:16:44.003338 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2021/12/19 17:16:44.003342 [INFO] Executing instruction: PreBuildEbExtension
+2021/12/19 17:16:44.003351 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2021/12/19 17:16:44.003367 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2 --configsets Infra-EmbeddedPreBuild
+2021/12/19 17:16:44.333993 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2021/12/19 17:16:44.334026 [INFO] Executing instruction: StageApplication
+2021/12/19 17:16:44.651502 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2021/12/19 17:16:44.651529 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2021/12/19 17:16:45.910891 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2021/12/19 17:16:46.029427 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2021/12/19 17:16:46.029460 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2021/12/19 17:16:46.029465 [INFO] Executing instruction: InstallDependency
+2021/12/19 17:16:46.029472 [INFO] checking dependencies file
+2021/12/19 17:16:46.029480 [INFO] Installing dependencies with requirements.txt by using Pip
+2021/12/19 17:16:46.029497 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2021/12/19 17:16:48.146961 [INFO] Collecting Pillow==6.0.0
+  Using cached Pillow-6.0.0-cp37-cp37m-manylinux1_x86_64.whl (2.0 MB)
+Collecting protobuf==3.7.1
+  Using cached protobuf-3.7.1-cp37-cp37m-manylinux1_x86_64.whl (1.2 MB)
+Collecting psycopg2==2.8.2
+  Using cached psycopg2-2.8.2.tar.gz (368 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+
+2021/12/19 17:16:48.147018 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:  ERROR: Command errored out with exit status 1:
+   command: /var/app/venv/staging-LQM1lest/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-c6j6czjr/psycopg2_97a17a7be3b540419000e4bcc29836b8/setup.py'"'"'; __file__='"'"'/tmp/pip-install-c6j6czjr/psycopg2_97a17a7be3b540419000e4bcc29836b8/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-2zv1du5g
+       cwd: /tmp/pip-install-c6j6czjr/psycopg2_97a17a7be3b540419000e4bcc29836b8/
+  Complete output (23 lines):
+  running egg_info
+  creating /tmp/pip-pip-egg-info-2zv1du5g/psycopg2.egg-info
+  writing /tmp/pip-pip-egg-info-2zv1du5g/psycopg2.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-2zv1du5g/psycopg2.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-2zv1du5g/psycopg2.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-2zv1du5g/psycopg2.egg-info/SOURCES.txt'
+  
+  Error: pg_config executable not found.
+  
+  pg_config is required to build psycopg2 from source.  Please add the directory
+  containing pg_config to the $PATH or specify the full executable path with the
+  option:
+  
+      python setup.py build_ext --pg-config /path/to/pg_config build ...
+  
+  or with the pg_config option in 'setup.cfg'.
+  
+  If you prefer to avoid building psycopg2 from source, please install the PyPI
+  'psycopg2-binary' package instead.
+  
+  For further information please check the 'doc/src/install.rst' file (also at
+  <http://initd.org/psycopg/docs/install.html>).
+  
+  ----------------------------------------
+WARNING: Discarding https://files.pythonhosted.org/packages/23/7e/93c325482c328619870b6cd09370f6dbe1148283daca65115cd63642e60f/psycopg2-2.8.2.tar.gz#sha256=5cacf21b6f813c239f100ef78a4132056f93a5940219ec25d2ef833cbeb05588 (from https://pypi.org/simple/psycopg2/) (requires-python:>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+ERROR: Could not find a version that satisfies the requirement psycopg2==2.8.2 (from versions: 2.0.10, 2.0.11, 2.0.12, 2.0.13, 2.0.14, 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.3.2, 2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.5, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.5.5, 2.6, 2.6.1, 2.6.2, 2.7, 2.7.1, 2.7.2, 2.7.3, 2.7.3.1, 2.7.3.2, 2.7.4, 2.7.5, 2.7.6, 2.7.6.1, 2.7.7, 2.8, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.9, 2.9.1, 2.9.2)
+ERROR: No matching distribution found for psycopg2==2.8.2
+ 
+
+2021/12/19 17:16:48.147027 [INFO] Executing cleanup logic
+2021/12/19 17:16:48.147152 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1639934208,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1639934208,"severity":"ERROR"}]}]}
+
+2021/12/19 17:16:48.147344 [INFO] Platform Engine finished execution on command: app-deploy
+
+2021/12/19 17:17:18.875799 [INFO] Starting...
+2021/12/19 17:17:18.875842 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:17:18.875857 [INFO] reading event message file
+2021/12/19 17:17:18.875955 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:17:18.876012 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:17:18.954240 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:17:19.271009 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:17:19.581247 [INFO] checking whether command bundle-log is applicable to this instance...
+2021/12/19 17:17:19.581261 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:17:19.581265 [INFO] Engine command: (bundle-log)
+
+2021/12/19 17:17:19.581314 [INFO] Executing instruction: GetBundleLogs
+2021/12/19 17:17:19.581319 [INFO] Bundle Logs...
+2021/12/19 17:17:19.682661 [INFO] Executing cleanup logic
+2021/12/19 17:17:19.682784 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1639934239,"severity":"INFO"}]}]}
+
+2021/12/19 17:17:19.682918 [INFO] Platform Engine finished execution on command: bundle-log
+
+2021/12/19 17:26:41.675188 [INFO] Starting...
+2021/12/19 17:26:41.675236 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:26:41.675252 [INFO] reading event message file
+2021/12/19 17:26:41.675350 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:26:41.675410 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:26:41.767037 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:26:42.082044 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:26:42.390531 [INFO] checking whether command app-deploy is applicable to this instance...
+2021/12/19 17:26:42.390545 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:26:42.390552 [INFO] Engine command: (app-deploy)
+
+2021/12/19 17:26:42.390565 [INFO] Downloading EB Application...
+2021/12/19 17:26:42.390569 [INFO] Region: us-west-2
+2021/12/19 17:26:42.390572 [INFO] envID: e-m3rhdv3whj
+2021/12/19 17:26:42.390577 [INFO] envBucket: elasticbeanstalk-us-west-2-222477928330
+2021/12/19 17:26:42.390581 [INFO] Using manifest file name from command request
+2021/12/19 17:26:42.390588 [INFO] Manifest name is : manifest_1639934798987
+2021/12/19 17:26:42.390597 [INFO] Download app version manifest
+2021/12/19 17:26:42.390727 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/versions/manifest_1639934798987
+2021/12/19 17:26:42.433922 [INFO] Download successful110bytes downloaded
+2021/12/19 17:26:42.434078 [INFO] Trying to read and parse version manifest...
+2021/12/19 17:26:42.438103 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/_versions/sistema-reclamacoes/app-e584-211219_142557
+2021/12/19 17:26:43.101737 [INFO] Download successful32747069bytes downloaded
+2021/12/19 17:26:43.102008 [INFO] Executing instruction: ElectLeader
+2021/12/19 17:26:43.102017 [INFO] Running leader election for instance i-097a7246364dca3da...
+2021/12/19 17:26:43.102025 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2021/12/19 17:26:43.102041 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 5d9fb2ce-81c5-4274-b5fd-b85d9d806684 --listener-id i-097a7246364dca3da --region us-west-2
+2021/12/19 17:26:43.400072 [INFO] Instance is Leader.
+2021/12/19 17:26:43.400123 [INFO] Executing instruction: stopSqsd
+2021/12/19 17:26:43.400129 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2021/12/19 17:26:43.400133 [INFO] Executing instruction: PreBuildEbExtension
+2021/12/19 17:26:43.400138 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2021/12/19 17:26:43.400153 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2 --configsets Infra-EmbeddedPreBuild
+2021/12/19 17:26:43.718382 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2021/12/19 17:26:43.718416 [INFO] Executing instruction: StageApplication
+2021/12/19 17:26:44.042084 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2021/12/19 17:26:44.042111 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2021/12/19 17:26:45.292164 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2021/12/19 17:26:45.414441 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2021/12/19 17:26:45.414486 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2021/12/19 17:26:45.414492 [INFO] Executing instruction: InstallDependency
+2021/12/19 17:26:45.414499 [INFO] checking dependencies file
+2021/12/19 17:26:45.414505 [INFO] Installing dependencies with requirements.txt by using Pip
+2021/12/19 17:26:45.414518 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2021/12/19 17:26:47.450000 [INFO] Collecting Pillow==6.0.0
+  Using cached Pillow-6.0.0-cp37-cp37m-manylinux1_x86_64.whl (2.0 MB)
+Collecting protobuf==3.7.1
+  Using cached protobuf-3.7.1-cp37-cp37m-manylinux1_x86_64.whl (1.2 MB)
+Collecting psycopg2==2.8.2
+  Using cached psycopg2-2.8.2.tar.gz (368 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+
+2021/12/19 17:26:47.450055 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:  ERROR: Command errored out with exit status 1:
+   command: /var/app/venv/staging-LQM1lest/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-1jhugn45/psycopg2_aa6233c78a4b41a891d780e0aa8bca8b/setup.py'"'"'; __file__='"'"'/tmp/pip-install-1jhugn45/psycopg2_aa6233c78a4b41a891d780e0aa8bca8b/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-wv4yw6qf
+       cwd: /tmp/pip-install-1jhugn45/psycopg2_aa6233c78a4b41a891d780e0aa8bca8b/
+  Complete output (23 lines):
+  running egg_info
+  creating /tmp/pip-pip-egg-info-wv4yw6qf/psycopg2.egg-info
+  writing /tmp/pip-pip-egg-info-wv4yw6qf/psycopg2.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-wv4yw6qf/psycopg2.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-wv4yw6qf/psycopg2.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-wv4yw6qf/psycopg2.egg-info/SOURCES.txt'
+  
+  Error: pg_config executable not found.
+  
+  pg_config is required to build psycopg2 from source.  Please add the directory
+  containing pg_config to the $PATH or specify the full executable path with the
+  option:
+  
+      python setup.py build_ext --pg-config /path/to/pg_config build ...
+  
+  or with the pg_config option in 'setup.cfg'.
+  
+  If you prefer to avoid building psycopg2 from source, please install the PyPI
+  'psycopg2-binary' package instead.
+  
+  For further information please check the 'doc/src/install.rst' file (also at
+  <http://initd.org/psycopg/docs/install.html>).
+  
+  ----------------------------------------
+WARNING: Discarding https://files.pythonhosted.org/packages/23/7e/93c325482c328619870b6cd09370f6dbe1148283daca65115cd63642e60f/psycopg2-2.8.2.tar.gz#sha256=5cacf21b6f813c239f100ef78a4132056f93a5940219ec25d2ef833cbeb05588 (from https://pypi.org/simple/psycopg2/) (requires-python:>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+ERROR: Could not find a version that satisfies the requirement psycopg2==2.8.2 (from versions: 2.0.10, 2.0.11, 2.0.12, 2.0.13, 2.0.14, 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.3.2, 2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.5, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.5.5, 2.6, 2.6.1, 2.6.2, 2.7, 2.7.1, 2.7.2, 2.7.3, 2.7.3.1, 2.7.3.2, 2.7.4, 2.7.5, 2.7.6, 2.7.6.1, 2.7.7, 2.8, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.9, 2.9.1, 2.9.2)
+ERROR: No matching distribution found for psycopg2==2.8.2
+ 
+
+2021/12/19 17:26:47.450073 [INFO] Executing cleanup logic
+2021/12/19 17:26:47.450165 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1639934807,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1639934807,"severity":"ERROR"}]}]}
+
+2021/12/19 17:26:47.450350 [INFO] Platform Engine finished execution on command: app-deploy
+
+2021/12/19 17:27:14.731029 [INFO] Starting...
+2021/12/19 17:27:14.731071 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:27:14.731086 [INFO] reading event message file
+2021/12/19 17:27:14.731184 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:27:14.731241 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:27:14.810740 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:27:15.145563 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:27:15.461221 [INFO] checking whether command bundle-log is applicable to this instance...
+2021/12/19 17:27:15.461233 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:27:15.461238 [INFO] Engine command: (bundle-log)
+
+2021/12/19 17:27:15.461298 [INFO] Executing instruction: GetBundleLogs
+2021/12/19 17:27:15.461303 [INFO] Bundle Logs...
+2021/12/19 17:27:15.535296 [INFO] Executing cleanup logic
+2021/12/19 17:27:15.535406 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1639934835,"severity":"INFO"}]}]}
+
+2021/12/19 17:27:15.535541 [INFO] Platform Engine finished execution on command: bundle-log
+
+2021/12/19 17:33:47.003847 [INFO] Starting...
+2021/12/19 17:33:47.003895 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:33:47.003920 [INFO] reading event message file
+2021/12/19 17:33:47.004019 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:33:47.004077 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:33:47.103933 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:33:47.475518 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:33:47.798796 [INFO] checking whether command app-deploy is applicable to this instance...
+2021/12/19 17:33:47.798809 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:33:47.798813 [INFO] Engine command: (app-deploy)
+
+2021/12/19 17:33:47.798820 [INFO] Downloading EB Application...
+2021/12/19 17:33:47.798823 [INFO] Region: us-west-2
+2021/12/19 17:33:47.798827 [INFO] envID: e-m3rhdv3whj
+2021/12/19 17:33:47.798830 [INFO] envBucket: elasticbeanstalk-us-west-2-222477928330
+2021/12/19 17:33:47.798835 [INFO] Using manifest file name from command request
+2021/12/19 17:33:47.798842 [INFO] Manifest name is : manifest_1639935224594
+2021/12/19 17:33:47.798846 [INFO] Download app version manifest
+2021/12/19 17:33:47.798950 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/versions/manifest_1639935224594
+2021/12/19 17:33:47.838763 [INFO] Download successful110bytes downloaded
+2021/12/19 17:33:47.838921 [INFO] Trying to read and parse version manifest...
+2021/12/19 17:33:47.842995 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/_versions/sistema-reclamacoes/app-e584-211219_143304
+2021/12/19 17:33:48.176742 [INFO] Download successful32747069bytes downloaded
+2021/12/19 17:33:48.176992 [INFO] Executing instruction: ElectLeader
+2021/12/19 17:33:48.177000 [INFO] Running leader election for instance i-097a7246364dca3da...
+2021/12/19 17:33:48.177004 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2021/12/19 17:33:48.177019 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 5344bddc-ebe3-4dac-9e1e-bdac78a9bf56 --listener-id i-097a7246364dca3da --region us-west-2
+2021/12/19 17:33:48.480430 [INFO] Instance is Leader.
+2021/12/19 17:33:48.480487 [INFO] Executing instruction: stopSqsd
+2021/12/19 17:33:48.480493 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2021/12/19 17:33:48.480498 [INFO] Executing instruction: PreBuildEbExtension
+2021/12/19 17:33:48.480502 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2021/12/19 17:33:48.480517 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2 --configsets Infra-EmbeddedPreBuild
+2021/12/19 17:33:48.809346 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2021/12/19 17:33:48.809381 [INFO] Executing instruction: StageApplication
+2021/12/19 17:33:49.115881 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2021/12/19 17:33:49.115909 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2021/12/19 17:33:50.367236 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2021/12/19 17:33:50.489579 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2021/12/19 17:33:50.489618 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2021/12/19 17:33:50.489623 [INFO] Executing instruction: InstallDependency
+2021/12/19 17:33:50.489629 [INFO] checking dependencies file
+2021/12/19 17:33:50.489636 [INFO] Installing dependencies with requirements.txt by using Pip
+2021/12/19 17:33:50.489668 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2021/12/19 17:33:52.544177 [INFO] Collecting Pillow==6.0.0
+  Using cached Pillow-6.0.0-cp37-cp37m-manylinux1_x86_64.whl (2.0 MB)
+Collecting protobuf==3.7.1
+  Using cached protobuf-3.7.1-cp37-cp37m-manylinux1_x86_64.whl (1.2 MB)
+Collecting psycopg2==2.8.2
+  Using cached psycopg2-2.8.2.tar.gz (368 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+
+2021/12/19 17:33:52.544232 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:  ERROR: Command errored out with exit status 1:
+   command: /var/app/venv/staging-LQM1lest/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-ju15xp1h/psycopg2_5416f75618364366b5317b64ddcc263c/setup.py'"'"'; __file__='"'"'/tmp/pip-install-ju15xp1h/psycopg2_5416f75618364366b5317b64ddcc263c/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-0rpuk61f
+       cwd: /tmp/pip-install-ju15xp1h/psycopg2_5416f75618364366b5317b64ddcc263c/
+  Complete output (23 lines):
+  running egg_info
+  creating /tmp/pip-pip-egg-info-0rpuk61f/psycopg2.egg-info
+  writing /tmp/pip-pip-egg-info-0rpuk61f/psycopg2.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-0rpuk61f/psycopg2.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-0rpuk61f/psycopg2.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-0rpuk61f/psycopg2.egg-info/SOURCES.txt'
+  
+  Error: pg_config executable not found.
+  
+  pg_config is required to build psycopg2 from source.  Please add the directory
+  containing pg_config to the $PATH or specify the full executable path with the
+  option:
+  
+      python setup.py build_ext --pg-config /path/to/pg_config build ...
+  
+  or with the pg_config option in 'setup.cfg'.
+  
+  If you prefer to avoid building psycopg2 from source, please install the PyPI
+  'psycopg2-binary' package instead.
+  
+  For further information please check the 'doc/src/install.rst' file (also at
+  <http://initd.org/psycopg/docs/install.html>).
+  
+  ----------------------------------------
+WARNING: Discarding https://files.pythonhosted.org/packages/23/7e/93c325482c328619870b6cd09370f6dbe1148283daca65115cd63642e60f/psycopg2-2.8.2.tar.gz#sha256=5cacf21b6f813c239f100ef78a4132056f93a5940219ec25d2ef833cbeb05588 (from https://pypi.org/simple/psycopg2/) (requires-python:>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+ERROR: Could not find a version that satisfies the requirement psycopg2==2.8.2 (from versions: 2.0.10, 2.0.11, 2.0.12, 2.0.13, 2.0.14, 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.3.2, 2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.5, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.5.5, 2.6, 2.6.1, 2.6.2, 2.7, 2.7.1, 2.7.2, 2.7.3, 2.7.3.1, 2.7.3.2, 2.7.4, 2.7.5, 2.7.6, 2.7.6.1, 2.7.7, 2.8, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.9, 2.9.1, 2.9.2)
+ERROR: No matching distribution found for psycopg2==2.8.2
+ 
+
+2021/12/19 17:33:52.544241 [INFO] Executing cleanup logic
+2021/12/19 17:33:52.544338 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1639935232,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1639935232,"severity":"ERROR"}]}]}
+
+2021/12/19 17:33:52.544525 [INFO] Platform Engine finished execution on command: app-deploy
+
+2021/12/19 17:34:20.775034 [INFO] Starting...
+2021/12/19 17:34:20.775074 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:34:20.775090 [INFO] reading event message file
+2021/12/19 17:34:20.775187 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:34:20.775245 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:34:20.858205 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:34:21.195789 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:34:21.495449 [INFO] checking whether command bundle-log is applicable to this instance...
+2021/12/19 17:34:21.495462 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:34:21.495466 [INFO] Engine command: (bundle-log)
+
+2021/12/19 17:34:21.495514 [INFO] Executing instruction: GetBundleLogs
+2021/12/19 17:34:21.495519 [INFO] Bundle Logs...
+2021/12/19 17:34:21.645546 [INFO] Executing cleanup logic
+2021/12/19 17:34:21.645660 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1639935261,"severity":"INFO"}]}]}
+
+2021/12/19 17:34:21.645791 [INFO] Platform Engine finished execution on command: bundle-log
+
+2021/12/19 17:37:36.899409 [INFO] Starting...
+2021/12/19 17:37:36.899454 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:37:36.899471 [INFO] reading event message file
+2021/12/19 17:37:36.899572 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:37:36.899631 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:37:37.138869 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:37:37.443739 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:37:37.744207 [INFO] checking whether command app-deploy is applicable to this instance...
+2021/12/19 17:37:37.744220 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:37:37.744225 [INFO] Engine command: (app-deploy)
+
+2021/12/19 17:37:37.744231 [INFO] Downloading EB Application...
+2021/12/19 17:37:37.744235 [INFO] Region: us-west-2
+2021/12/19 17:37:37.744238 [INFO] envID: e-m3rhdv3whj
+2021/12/19 17:37:37.744242 [INFO] envBucket: elasticbeanstalk-us-west-2-222477928330
+2021/12/19 17:37:37.744246 [INFO] Using manifest file name from command request
+2021/12/19 17:37:37.744253 [INFO] Manifest name is : manifest_1639935454456
+2021/12/19 17:37:37.744257 [INFO] Download app version manifest
+2021/12/19 17:37:37.744364 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/versions/manifest_1639935454456
+2021/12/19 17:37:37.782030 [INFO] Download successful110bytes downloaded
+2021/12/19 17:37:37.782216 [INFO] Trying to read and parse version manifest...
+2021/12/19 17:37:37.786303 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-222477928330, object: /resources/environments/e-m3rhdv3whj/_runtime/_versions/sistema-reclamacoes/app-e584-211219_143654
+2021/12/19 17:37:38.824840 [INFO] Download successful32747069bytes downloaded
+2021/12/19 17:37:38.825124 [INFO] Executing instruction: ElectLeader
+2021/12/19 17:37:38.825137 [INFO] Running leader election for instance i-097a7246364dca3da...
+2021/12/19 17:37:38.825142 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2021/12/19 17:37:38.825157 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id a842749c-32d8-4ff5-be5a-99e4d418694f --listener-id i-097a7246364dca3da --region us-west-2
+2021/12/19 17:37:39.132687 [INFO] Instance is Leader.
+2021/12/19 17:37:39.132741 [INFO] Executing instruction: stopSqsd
+2021/12/19 17:37:39.132747 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2021/12/19 17:37:39.132751 [INFO] Executing instruction: PreBuildEbExtension
+2021/12/19 17:37:39.132756 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2021/12/19 17:37:39.132770 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2 --configsets Infra-EmbeddedPreBuild
+2021/12/19 17:37:39.465895 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2021/12/19 17:37:39.465926 [INFO] Executing instruction: StageApplication
+2021/12/19 17:37:39.781843 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2021/12/19 17:37:39.781889 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2021/12/19 17:37:41.060466 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2021/12/19 17:37:41.172214 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2021/12/19 17:37:41.172249 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2021/12/19 17:37:41.172255 [INFO] Executing instruction: InstallDependency
+2021/12/19 17:37:41.172267 [INFO] checking dependencies file
+2021/12/19 17:37:41.172275 [INFO] Installing dependencies with requirements.txt by using Pip
+2021/12/19 17:37:41.172291 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2021/12/19 17:37:43.241868 [INFO] Collecting Pillow==6.0.0
+  Using cached Pillow-6.0.0-cp37-cp37m-manylinux1_x86_64.whl (2.0 MB)
+Collecting protobuf==3.7.1
+  Using cached protobuf-3.7.1-cp37-cp37m-manylinux1_x86_64.whl (1.2 MB)
+Collecting psycopg2==2.8.2
+  Using cached psycopg2-2.8.2.tar.gz (368 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+
+2021/12/19 17:37:43.241926 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:  ERROR: Command errored out with exit status 1:
+   command: /var/app/venv/staging-LQM1lest/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-3iz4ep_6/psycopg2_04c781eeddc34d0f9b2263890362b781/setup.py'"'"'; __file__='"'"'/tmp/pip-install-3iz4ep_6/psycopg2_04c781eeddc34d0f9b2263890362b781/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-um6lj1ic
+       cwd: /tmp/pip-install-3iz4ep_6/psycopg2_04c781eeddc34d0f9b2263890362b781/
+  Complete output (23 lines):
+  running egg_info
+  creating /tmp/pip-pip-egg-info-um6lj1ic/psycopg2.egg-info
+  writing /tmp/pip-pip-egg-info-um6lj1ic/psycopg2.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-um6lj1ic/psycopg2.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-um6lj1ic/psycopg2.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-um6lj1ic/psycopg2.egg-info/SOURCES.txt'
+  
+  Error: pg_config executable not found.
+  
+  pg_config is required to build psycopg2 from source.  Please add the directory
+  containing pg_config to the $PATH or specify the full executable path with the
+  option:
+  
+      python setup.py build_ext --pg-config /path/to/pg_config build ...
+  
+  or with the pg_config option in 'setup.cfg'.
+  
+  If you prefer to avoid building psycopg2 from source, please install the PyPI
+  'psycopg2-binary' package instead.
+  
+  For further information please check the 'doc/src/install.rst' file (also at
+  <http://initd.org/psycopg/docs/install.html>).
+  
+  ----------------------------------------
+WARNING: Discarding https://files.pythonhosted.org/packages/23/7e/93c325482c328619870b6cd09370f6dbe1148283daca65115cd63642e60f/psycopg2-2.8.2.tar.gz#sha256=5cacf21b6f813c239f100ef78a4132056f93a5940219ec25d2ef833cbeb05588 (from https://pypi.org/simple/psycopg2/) (requires-python:>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+ERROR: Could not find a version that satisfies the requirement psycopg2==2.8.2 (from versions: 2.0.10, 2.0.11, 2.0.12, 2.0.13, 2.0.14, 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.3.2, 2.4, 2.4.1, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.5, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.5.5, 2.6, 2.6.1, 2.6.2, 2.7, 2.7.1, 2.7.2, 2.7.3, 2.7.3.1, 2.7.3.2, 2.7.4, 2.7.5, 2.7.6, 2.7.6.1, 2.7.7, 2.8, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.9, 2.9.1, 2.9.2)
+ERROR: No matching distribution found for psycopg2==2.8.2
+ 
+
+2021/12/19 17:37:43.241944 [INFO] Executing cleanup logic
+2021/12/19 17:37:43.242071 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1639935463,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1639935463,"severity":"ERROR"}]}]}
+
+2021/12/19 17:37:43.242261 [INFO] Platform Engine finished execution on command: app-deploy
+
+2021/12/19 17:38:14.400010 [INFO] Starting...
+2021/12/19 17:38:14.400055 [INFO] Starting EBPlatform-PlatformEngine
+2021/12/19 17:38:14.400071 [INFO] reading event message file
+2021/12/19 17:38:14.400170 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/12/19 17:38:14.400228 [INFO] Engine received EB command cfn-hup-exec
+
+2021/12/19 17:38:14.505420 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBAutoScalingGroup --region us-west-2
+2021/12/19 17:38:14.824408 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:222477928330:stack/awseb-e-m3rhdv3whj-stack/9b6398b0-60dc-11ec-83de-06d630cd98f9 -r AWSEBBeanstalkMetadata --region us-west-2
+2021/12/19 17:38:15.135672 [INFO] checking whether command bundle-log is applicable to this instance...
+2021/12/19 17:38:15.135686 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/12/19 17:38:15.135690 [INFO] Engine command: (bundle-log)
+
+2021/12/19 17:38:15.135740 [INFO] Executing instruction: GetBundleLogs
+2021/12/19 17:38:15.135745 [INFO] Bundle Logs...
